@@ -12,7 +12,16 @@ firebase.initializeApp({
   projectId: "pseudogram-a242a",
   storageBucket: "pseudogram-a242a.appspot.com",
   messagingSenderId: "511363479407"
-  //Project public-facing name: project-511363479407
+  // Project public-facing name: project-511363479407
+
+  // Security rules
+  // service firebase.storage {
+  //   match /b/{bucket}/o {
+  //     match /{allPaths=**} {
+  //       allow read, write: if request.auth != null;
+  //     }
+  //   }
+  // }
 });
 
 ReactDOM.render(
